@@ -8,11 +8,6 @@ require 'pry'
 FlickRaw.api_key= ENV['FLICKR_API_KEY']
 FlickRaw.shared_secret = ENV['FLICKR_API_SECRET']
 
-class PhotoSearch
-  def initialize(text)
-  end
-end
-
 get '/:width/:height/:query' do
   query = params[:query]
   width = params[:width].to_i
