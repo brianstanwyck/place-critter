@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title placecritter
+    link rel='stylesheet' href="index.css"
+  body
+    .wrapper
+      #top
+        h1 This is placecritter,
+        h1 for all your arbitrarily-sized critter needs.
+      .left
+        h2 How to use it
+        |Give placecritter a width, height, and animal name. Like so:
+        .example
+          a href='http://place-critter.herokuapp.com/400/400/capybara' target='_blank'
+            |place-critter.herokuapp.com/400/400/capybara
+        |Or embed it in your <tt>&lt;img&gt;</tt> tags.
+      .right
+        img{style='float: left' src='/img/200x200.jpg'}
+        img{style='float: left' src='/img/200x200_2.jpg'}
+        img{src='/img/250x200.jpg'}
+        img{src='/img/150x200.jpg'}
+      footer#footer
+        p
+          |
+            Created by Brian Stanwyck. All images from <a href='http://www.flickr.com/'>Flickr</a>.
+            Inspired by <a href='http://www.placekitten.com'>placekitten</a>.

@@ -3,9 +3,25 @@ require 'sinatra'
 require 'flickraw'
 require 'RMagick'
 require 'open-uri'
+require 'slim'
+require 'sass'
 
 FlickRaw.api_key= ENV['FLICKR_API_KEY']
 FlickRaw.shared_secret = ENV['FLICKR_API_SECRET']
+
+get '/' do
+  slim :index
+end
+
+get '/img/*' do
+  content_type 'image/jpeg'
+  File.read(File.join 'img', params[:splat].first)
+end
+
+get '/*.css' do
+  file = params[:splat].first.to_sym
+  sass file
+end
 
 get '/:width/:height/:query' do
   query = params[:query]

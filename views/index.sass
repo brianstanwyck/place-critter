@@ -1,0 +1,64 @@
+$width: 900px
+$cyan: #00ffaf
+
+body
+  font-family: 'Helvetica Neue'
+.wrapper
+  width: $width
+  margin: 0 auto
+
+a
+  color: $cyan
+  text-decoration: none
+
+a:hover
+  background-color: $cyan
+  color: white
+  text-decoration: none
+
+#top
+  background-color: $cyan
+  padding: 25px
+  h1
+    line-height: 1
+    letter-spacing: -2px
+    font-size: 45px
+
+$column_pad: 20px
+.left, .right
+  width: $width/2 - 2*$column_pad
+  background-color: black
+  color: white
+  height: 400px
+  padding: $column_pad
+  h2
+    text-align: center
+
+#footer
+  background-color: black
+  color: white
+
+.left
+  float: left
+
+.right
+  text-align: left
+  margin-left: $width/2
+
+.example
+  border: 1px dashed
+  border-color: cyan
+  padding: 25px
+  margin: 20px 0
+  white-space: nowrap
+  font-weight: bold
+  a
+    padding: 3px
+
+#footer
+  font-size: 12px
+  color: white
+  margin: 0 auto
+  p
+    text-align: center
+    padding: 4px
