@@ -3,7 +3,6 @@ require 'sinatra'
 require 'flickraw'
 require 'rmagick'
 require 'open-uri'
-require 'pry'
 
 FlickRaw.api_key= ENV['FLICKR_API_KEY']
 FlickRaw.shared_secret = ENV['FLICKR_API_SECRET']
