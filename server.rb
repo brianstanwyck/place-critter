@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'flickraw'
-require 'rmagick'
+require 'RMagick'
 require 'open-uri'
 
 FlickRaw.api_key= ENV['FLICKR_API_KEY']
