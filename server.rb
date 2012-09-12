@@ -10,8 +10,9 @@ FlickRaw.api_key= ENV['FLICKR_API_KEY']
 FlickRaw.shared_secret = ENV['FLICKR_API_SECRET']
 
 module PhotoSearch
+  TAGS = %w{animal cute}
   def self.search(query)
-    flickr.photos.search(text: "#{query}", tags: "animal").to_a.map { |result| Photo.new(result) }
+    flickr.photos.search(text: "#{query}", tags: TAGS.join(',')).to_a.map { |result| Photo.new(result) }
   end
 end
 
